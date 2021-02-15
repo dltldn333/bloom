@@ -464,10 +464,10 @@ header div {
     }
 }
 
-
+/* 
 .mobile_logo_btn:active {
     transform: scale(1.2);
-}
+} */
 
 .mobile_logo{
     position: absolute;
@@ -494,7 +494,6 @@ header div {
 #simbol_button:checked+.mobile_logo_btn{
     background-color: #191919 !important;
     border: solid white 3px;
-    z-index: 50;
 }
 
 #simbol_button:checked+.mobile_logo_btn .mobile_logo{
