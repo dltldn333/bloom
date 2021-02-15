@@ -255,7 +255,7 @@ nav {
 
 #block_align_btn:hover,
 #list_align_btn:hover {
-    width: 2.2%;
+    transform: scale(1.1);
 }
 
 #block_align_btn:hover~#block_align_text,
@@ -465,7 +465,7 @@ header div {
 }
 
 
-.mobile_logo_btn:hover {
+.mobile_logo_btn:active {
     transform: scale(1.1);
 }
 
@@ -567,9 +567,13 @@ header div {
     margin-right: 3.06%;
 }
 
+#block_align_btn:active,
+#list_align_btn:active {
+    transform: scale(1.1) !important;
+}
 #block_align_btn:hover,
 #list_align_btn:hover {
-    width: 8.56%;
+    transform: scale(1.0);
 }
 
 #block_align_btn:hover~#block_align_text,
