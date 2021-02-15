@@ -497,7 +497,7 @@ header div {
 }
 
 #simbol_button:checked+.mobile_logo_btn .mobile_logo{
-    fill: white;
+    fill: blue;
     transform: rotate(720deg);
 }
 
