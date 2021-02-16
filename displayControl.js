@@ -22,6 +22,8 @@ window.addEventListener('scroll', function(){
     var logo_button = document.querySelector("#logo_btn")
     logo_button.classList.toggle("btn_mode_off", window.scrollY > 0)
     logo_button.classList.toggle("mobile_logo_btn", logo_button.classList.contains('btn_mode_off') == false)
-
+    if (window.scrollY > 0){
+        let simbolButton = document.querySelector('#simbol_button')
+        simbolButton.checked = false
+    } 
 })
-

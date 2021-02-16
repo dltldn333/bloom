@@ -413,12 +413,13 @@ header {
     height: unset;
     overflow: hidden;
     min-height: 0px;
-    z-index: 20;
-    padding-top: unset;
+    z-index: 10;
+    padding-top: 66.67%;
 }
 
-header div {
-    position: relative;
+
+.header_box {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,6 +431,11 @@ header div {
 .left_nav,
 .right_nav {
     display: none;
+}
+
+.mobile_logo,
+.mobile_nav{
+    display: inline-block;
 }
 
 .mobile_logo{
@@ -449,6 +455,7 @@ header div {
     box-sizing: content-box;
     background-color: rgba(255, 255, 255, 100%);
     box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 10%);
+    z-index: 20;
 }
 
 .btn_mode_off {
@@ -493,10 +500,49 @@ header div {
 }
 
 .mobile_nav{
-    display: none;
-    justify-content: space-between;
     width: 100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 12;
 }
+
+.mobile_nav li{
+    position: absolute;
+    width: 30.58%;
+    text-align: center;
+}
+
+.mobile_nav span{
+    position: relative;
+    display: block;
+    background-color: white;
+    width: 50%;
+    padding-top: 50%;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 10%);
+    margin: auto;
+}
+
+.mobile_nav span:active{
+    transform: scale(1.1);
+}
+
+.mobile_nav img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+}
+
+#developer_info img{
+    width: 70%;
+}
+
+
 
 .mobile_nav li a{
     font-size: 2.67vw;
@@ -512,6 +558,97 @@ header div {
     transform: rotate(720deg);
 }
 
+/* 버튼 등장 모션 */
+
+/* 결과 버튼 */
+#test_result{
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    left: 50%;
+    top: 11%;
+    transform:translateX(-50%);
+}
+
+#simbol_button:checked~.mobile_nav #test_result{
+    /* transition: 0.2s linear forwards 0.4s; */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+    opacity: 1;
+    left: 0;
+    top: 42%;
+    transform:translateX(0);
+}
+
+/* 공유 버튼 */
+#share_to_friends{
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    left: 50%;
+    top: 11%;
+    transform:translateX(-50%);
+}
+
+#simbol_button:checked~.mobile_nav #share_to_friends{
+    /* transition: 0.2s linear forwards 0.4s; */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+    opacity: 1;
+    top: 42%;
+}
+
+/* 개발자 정보 버튼 */
+#developer_info{
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    right: 50%;
+    top: 11%;
+    transform:translateX(50%);
+}
+
+#simbol_button:checked~.mobile_nav #developer_info{
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+    opacity: 1;
+    right: 0;
+    top: 42%;
+    transform:translateX(0);
+}
+
+/* 버튼 텍스트 조정 */
+
+.mobile_nav p{
+    margin-top: 5%;
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.039%;
+    color: #191919;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 10%); 
+    font-size: 2.67vw;
+    opacity: 0;
+}
+
+#simbol_button:checked~.mobile_nav p{
+    transition: all 0.6s cubic-bezier(0.7, 0, 0.84, 0) 0.5s;
+    opacity: 1;
+}
+
+/* 버튼 배경 조정 */
+.header_grd{
+    display: block;
+    position: absolute;
+    background: linear-gradient( rgba(255, 255, 255, 80%), rgba(255, 255, 255,0%));
+    z-index: 11;
+    width: 114.7%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#simbol_button:checked~.header_grd{
+    opacity: 1;
+    transition: opacity 3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
 
 /* -----------------------
             슬라이더
@@ -519,6 +656,7 @@ header div {
 
 .slider_section {
     padding-top: 133.34%;
+    background-color: purple;
 }
 
 .slider_box {
@@ -593,7 +731,7 @@ header div {
 }
 
 
-/* 블럭정렬*/
+/* 블럭정렬 */
 
 .block_view .contents_space {
     flex-direction: column;
@@ -632,4 +770,5 @@ header div {
     padding: 1.83% 0;
     min-width: 50px;
 }
+
 }
