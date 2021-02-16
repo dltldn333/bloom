@@ -452,6 +452,15 @@ header div {
 }
 
 .btn_mode_off {
+    border-radius: 50%;
+    width: 21.41%;
+    padding-top: 21.41%;
+    height: 0;
+    margin: 4.59% 0;
+    transform: scale(1.0);
+    transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+    transition: opacity 0.4s cubic-bezier(0.5, 0, 0.75, 0) 0.3s;
+    box-sizing: content-box;
     animation: fadein_btn 0.6s forwards;
 }
 

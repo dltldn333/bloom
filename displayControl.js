@@ -19,57 +19,9 @@ $('#list_align_btn').click(function(){
 //모바일 버튼 제어
 
 window.addEventListener('scroll', function(){
-    var logo_button = document.querySelector(".mobile_logo_btn")
-    logo_button.classList.toggle("btn_mode", window.scrollY > 0)
+    var logo_button = document.querySelector("#logo_btn")
+    logo_button.classList.toggle("btn_mode_off", window.scrollY > 0)
+    logo_button.classList.toggle("mobile_logo_btn", logo_button.classList.contains('btn_mode_off') == false)
+
 })
 
-$.fn.scrollStopped = function(callback) {
-    var that = this, $this = $(that);
-    $this.scroll(function(ev) {
-      clearTimeout($this.data('scrollTimeout'));
-      $this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
-    });
-  };
-   
-$(window).scrollStopped(function(){
-    $(".mobile_logo_btn").css('opacity', '1');
-})
-
-  
-
-//Javascript
-var lastScrollTop = 0;
-var delta = 5;
-var fixBox = document.querySelector('.mobile_logo_btn');
-var fixBoxHeight = fixBox.offsetHeight;
-var didScroll;
-//스크롤 이벤트 
-window.onscroll = function(e) {
-    didScroll = true;
-};
-
-//0.25초마다 스크롤 여부 체크하여 스크롤 중이면 hasScrolled() 호출
-setInterval(function(){
-    if(didScroll){
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
-
-function hasScrolled(){
-    var nowScrollTop = window.scrollY;
-    if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
-        return;
-    }
-    if(nowScrollTop > lastScrollTop || nowScrollTop > fixBoxHeight){
-            //Scroll down
-            $(".mobile_logo_btn").css('opacity', '0.2');
-            $('#simbol_button').prop('checked', (false))
-    }
-    lastScrollTop = nowScrollTop;
-}
-
-$('body').on("scrollstop",function(){
-    alert("Stopped scrolling!");
-  });
-    
