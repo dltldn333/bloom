@@ -148,32 +148,9 @@ nav {
     padding-bottom: 3.13%;
 }
 
-#big_tag_and_button {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.big_tag {
-    display: inline-block;
-    padding: 1.25% 4.375% 1.17%;
-    font-size: 1.56vw;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 5px;
-    color: #f8f8fa;
-    font-weight: 700;
-    margin-right: 3.125%;
-}
-
-#big_new_tag {
-    background-color: #ff3120;
-    border: solid 2px #ff3120;
-
-}
-
 #big_start_button {
     display: inline-block;
-    padding: 0.86% 5.63%;
+    padding: 0.86% 0;
     font-size: 1.56vw;
     font-weight: 700;
     color: #f8f8fa;
@@ -183,6 +160,7 @@ nav {
     border: solid 2px #191919;
     box-sizing: border-box;
     cursor: pointer;
+    width: 21.97%;
 }
 
 #big_start_button:hover {
@@ -280,12 +258,12 @@ nav {
     overflow: hidden;
     margin-top: 3.125%;
     margin-right: 3.125%;
+    box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 10%);
     cursor: pointer;
 }
 
 .block_view .contents_block:hover {
     background-color: #F1F1F5;
-    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 10%);
     transform: scale(1.1);
     z-index: 10;
 }
@@ -327,6 +305,7 @@ nav {
     background-color: #E1E1EB;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 10%);
 }
 
 .list_view .contents_block:hover{
@@ -633,7 +612,7 @@ header {
 .header_grd{
     display: block;
     position: absolute;
-    background: linear-gradient( rgba(255, 255, 255, 80%), rgba(255, 255, 255,0%));
+    background: linear-gradient( rgba(255, 255, 255, 40%)0%, rgba(255, 255, 255, 30%)60%, rgba(255, 255, 255,0%)100%);
     z-index: 11;
     width: 114.7%;
     height: 100%;
@@ -771,4 +750,27 @@ header {
     min-width: 50px;
 }
 
+
+.contents_block:focus{
+    outline: 0 !important;
+}
+
+.block_view .contents_block:hover {
+    background-color: #E1E1EB;
+    transform: none;
+    z-index: 2;
+}
+
+.list_view .contents_block:hover {
+    background-color: #E1E1EB;
+    transform: none;
+}
+
+
+.block_view .contents_block:active {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: scale(0.9);
+}
+
+/* 모바일 미디어쿼리 종료 */
 }
