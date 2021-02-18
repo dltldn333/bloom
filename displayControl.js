@@ -34,9 +34,14 @@ window.addEventListener('scroll', function(){
 
 function headChange(){
     const slider_color = $('.slider_section').css('background-color')
-    console.log(slider_color)
     $('.headcolor').attr('content', slider_color)
 }
+
+
+
+
+
+
 
 function init(){
     headChange()
