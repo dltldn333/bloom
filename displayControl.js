@@ -34,6 +34,7 @@ window.addEventListener('scroll', function(){
 
 function buttonClickError(){
     $(".mobile_logo").click(function(){
+        let simbolButton = document.querySelector('#simbol_button')
         simbolButton.checked = true
     });
 }
