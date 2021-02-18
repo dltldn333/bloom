@@ -38,7 +38,7 @@ window.addEventListener('scroll', function(){
 // });
 
 
-$(".mobile_logo_btn").click(function(){
+$(".mobile_logo").click(function(){
     that = $(this);
     that.toggleClass('button_check', that.is(':checked'));
 });
