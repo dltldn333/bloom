@@ -32,12 +32,13 @@ window.addEventListener('scroll', function(){
     } 
 })
 
-// function canClick() {
-//     $('.contents_block').setAttribute('ontouchstart', '')
-// }
+function headChange(){
+    const slider_color = $('.slider_section').css('background-color')
+    console.log(slider_color)
+    $('.headcolor').attr('content', slider_color)
+}
 
-// function init() {
-//     canClick()
-// }
-
-// init();
+function init(){
+    headChange()
+}
+init();
