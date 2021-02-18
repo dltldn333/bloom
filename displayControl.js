@@ -32,3 +32,12 @@ window.addEventListener('scroll', function(){
     } 
 })
 
+// function canClick() {
+//     $('.contents_block').setAttribute('ontouchstart', '')
+// }
+
+// function init() {
+//     canClick()
+// }
+
+// init();
