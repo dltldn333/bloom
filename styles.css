@@ -531,8 +531,6 @@ header {
     width: 70%;
 }
 
-
-
 .mobile_nav li a{
     font-size: 2.67vw;
 }
@@ -645,7 +643,7 @@ header {
 
 .slider_section {
     padding-top: 133.34%;
-    background-color: #7676EA;
+    background-color: wheat;
 }
 
 .slider_box {
@@ -708,7 +706,7 @@ header {
 
 #block_align_btn:active,
 #list_align_btn:active {
-    transform: scale(1.1) !important;
+    transform: scale(1.3) !important;
 }
 #block_align_btn:hover,
 #list_align_btn:hover {
