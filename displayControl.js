@@ -1,7 +1,7 @@
 //Fast tuch 라이브러리 사용
-$(function() {
-    FastClick.attach(document.body);
-    });
+// $(function() {
+//     FastClick.attach(document.body);
+//     });
     
 (function() {
     const change_view = $('#change_view') //보기방식 변경
@@ -32,30 +32,26 @@ window.addEventListener('scroll', function(){
     } 
 })
 
-// $('.mobile_logo').click(function(){
-//     let simbolButton = document.querySelector('#simbol_button')
-//     simbolButton.checked = true
+// $(".mobile_logo").click(function(){
+//     that = $(this);
+//     that.toggleClass('button_check', that.is(':checked'));
 // });
-
-
-$(".mobile_logo").click(function(){
-    that = $(this);
-    that.toggleClass('button_check', that.is(':checked'));
-});
 
 function headChange(){
     const slider_color = $('.slider_section').css('background-color')
     $('.headcolor').attr('content', slider_color)
 }
 
-
-
+function blockAddMotion() {
+    $('.contents_block').attr('ontouchstart', '')
+}
 
 
 
 
 function init(){
     headChange()
+    blockAddMotion()
 }
 
 init();

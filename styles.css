@@ -12,6 +12,8 @@
     margin: 0;
     padding: 0;
     user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -247,6 +249,18 @@ nav {
 #block_align_btn:hover~#block_align_text,
 #list_align_btn:hover~#list_align_text {
     display: inline-block;
+}
+
+
+@keyframes blockShowMotion{
+    from{
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 
@@ -643,7 +657,7 @@ header {
 
 .slider_section {
     padding-top: 133.34%;
-    background-color: slategrey;
+    background-color: azure;
 }
 
 .slider_box {
