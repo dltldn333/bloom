@@ -31,3 +31,4 @@ window.addEventListener('scroll', function(){
         simbolButton.checked = false
     } 
 })
+
