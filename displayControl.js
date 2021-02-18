@@ -32,12 +32,16 @@ window.addEventListener('scroll', function(){
     } 
 })
 
-function buttonClickError(){
-    $(".mobile_logo").click(function(){
-        let simbolButton = document.querySelector('#simbol_button')
-        simbolButton.checked = true
-    });
-}
+// $('.mobile_logo').click(function(){
+//     let simbolButton = document.querySelector('#simbol_button')
+//     simbolButton.checked = true
+// });
+
+
+$(".mobile_logo_btn").click(function(){
+    that = $(this);
+    that.toggleClass('button_check', that.is(':checked'));
+});
 
 function headChange(){
     const slider_color = $('.slider_section').css('background-color')
@@ -52,6 +56,6 @@ function headChange(){
 
 function init(){
     headChange()
-    buttonClickError()
 }
+
 init();
