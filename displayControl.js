@@ -32,6 +32,12 @@ window.addEventListener('scroll', function(){
     } 
 })
 
+function buttonClickError(){
+    $(".mobile_logo").click(function(){
+        simbolButton.checked = true
+    });
+}
+
 function headChange(){
     const slider_color = $('.slider_section').css('background-color')
     $('.headcolor').attr('content', slider_color)
@@ -45,5 +51,6 @@ function headChange(){
 
 function init(){
     headChange()
+    buttonClickError()
 }
 init();
