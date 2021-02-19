@@ -1,8 +1,4 @@
-//Fast tuch 라이브러리 사용
-// $(function() {
-//     FastClick.attach(document.body);
-//     });
-    
+
 (function() {
     const change_view = $('#change_view') //보기방식 변경
     //블럭 버튼 클릭 시
@@ -32,10 +28,15 @@ window.addEventListener('scroll', function(){
     } 
 })
 
-// $(".mobile_logo").click(function(){
-//     that = $(this);
-//     that.toggleClass('button_check', that.is(':checked'));
-// });
+$('.mobile_logo_btn').click(function(){
+    if(navigator.vibrate){
+        navigator.vibrate(2000)
+        console.log('진동~~~')
+    } else{
+        console.log('진동을 사용할 수 없는 기기')
+    }
+});
+
 
 function headChange(){
     const slider_color = $('.slider_section').css('background-color')
