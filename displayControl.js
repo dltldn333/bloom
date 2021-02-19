@@ -30,7 +30,7 @@ window.addEventListener('scroll', function(){
 
 $('.mobile_logo_btn').click(function(){
     if(navigator.vibrate){
-        navigator.vibrate(2000)
+        navigator.vibrate(200)
         console.log('진동~~~')
     } else{
         console.log('진동을 사용할 수 없는 기기')
