@@ -188,9 +188,13 @@ body, html{
 }
 
 .addthis_inline_share_toolbox{
-    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
 }
 
+.addthis_inline_share_toolbox a{
+    margin: 0 !important;
+}
 
 /* 모바일 화면 크기 맞춤 */
 
