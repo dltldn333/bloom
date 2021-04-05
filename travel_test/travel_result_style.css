@@ -187,6 +187,9 @@ body, html{
     border-radius: 10px;
 }
 
+.addthis_inline_share_toolbox{
+    margin: auto;
+}
 
 
 /* 모바일 화면 크기 맞춤 */
