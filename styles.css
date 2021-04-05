@@ -59,6 +59,7 @@ h3 {
 /* 푸터설정 */
 
 footer{
+    font-size: 1.5rem;
     padding: 4.17% 16.67%;
     margin-top: 4.17%;
     line-height: 150%;
@@ -169,7 +170,8 @@ nav {
 #big_start_button {
     display: inline-block;
     padding: 0.86% 0;
-    font-size: 1.56vw;
+    /* font-size: 1.56vw; */
+    font-size: 1.875rem;
     font-weight: 700;
     color: #f8f8fa;
     border-radius: 5px;
@@ -179,6 +181,7 @@ nav {
     box-sizing: border-box;
     cursor: pointer;
     width: 22.66%;
+    /* width: 290px; */
 }
 
 #big_start_button:hover {
@@ -209,14 +212,14 @@ nav {
 
 #title_and_align_btn h2 {
     display: inline-block;
-    font-size: 1.875vw;
+    font-size: 2.25rem;
     font-weight: 700;
-    margin-right: 1.5625%;
+    margin-right: 20px;
 }
 
 .tests_headline {
     margin-top: 6.25%;
-    font-size: 1.5625vw;
+    font-size: 1.875rem;
     font-weight: 700;
 }
 
@@ -225,9 +228,9 @@ nav {
 #block_align_btn,
 #list_align_btn {
     display: inline-block;
-    width: 1.875%;
-    height: 1.875%;
-    margin-right: 0.78125%;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 
@@ -239,7 +242,7 @@ nav {
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -0.039%;
     font-weight: 700;
-    font-size: 1.04vw;
+    font-size: 1.25rem;
     text-decoration: underline;
 }
 
@@ -309,7 +312,7 @@ nav {
 }
 
 .block_view .contents_block:hover {
-    transform: scale(1.1);
+    transform: scale(0.95);
     z-index: 10;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -356,7 +359,7 @@ nav {
 }
 
 .list_view .contents_block:hover{
-    transform: scale(1.07);
+    transform: scale(1.05);
     z-index: 10;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -416,11 +419,32 @@ nav {
                    태블릭용 CSS
  
 --------------------------------------------*/
-@media all and (max-width:960px){
-    
+/* @media all and (max-width:960px){
+    header div {
+        width: 90%;
+    }
 
+    .slider_item{
+        width: 90%;
+    }
 
-}
+    .contents_section{
+        width: 90%;
+    }
+
+    .block_view .contents_block {
+        position: relative;
+        width: 48.43%;
+    }
+
+    .block_view .contents_block:nth-of-type(2n) {
+        margin-right: 0;
+    }
+
+    .block_view .contents_block:nth-of-type(3n) {
+        margin-right: 3.125%;
+    }
+} */
 
 
 
@@ -430,7 +454,7 @@ nav {
  
 --------------------------------------------*/
 
-@media all and (max-width:768px){
+@media all and (max-width:960px){
 
 /* 헤더설정 */
 
@@ -558,7 +582,7 @@ header {
     transform: scale(1.1);
 }
 
-.mobile_nav img{
+.mobile_nav svg{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -566,14 +590,23 @@ header {
     right: 0;
     margin: auto;
     width: 60%;
+    fill: none;
+    stroke: black;
+    stroke-width: 3.5px;
 }
 
-#developer_info img{
+.mobile_nav span:active svg{
+    fill: gray;
+    /* stroke: none; */
+}
+
+#developer_info svg{
     width: 70%;
 }
 
-.mobile_nav li a{
+.mobile_nav li p{
     font-size: 2.67vw;
+    font-weight: 300;
 }
 
 #simbol_button:checked+.mobile_logo_btn{

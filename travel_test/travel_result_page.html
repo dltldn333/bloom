@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트 결과</title>
+    <link rel="stylesheet" href="travel_result_style.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+</head>
+<body>
+    <div class="space">
+        <div class="travel_result_section">
+            <div id="type_space"><img src="type_svg/Type_FAM.svg" alt=""></div>
+            <div id="place_space"><img src="palce_svg/Korea.svg" alt=""></div>
+            <h3>자유로운 낭만가 </h3>
+            <h4>대한민국</h4>
+            <p> <br>당신의 여행 타입은 <b>“자유로운 낭만가”</b>입니다<br>
+                계획없이 자유롭게 돌아보는 것을 좋아하고 원할 때는
+               가지고 있는 경비를 아낌없이 투자하는 당신은 
+               길을 잃고 헤매는 것 조차 즐기고 있을 수도 있습니다.<br><br>
+            </p>
+            <p>당신에게 추천하는 여행지는 <b>“이집트”</b>
+               입니다.<br> 아프리카 북동부에 위치한 이집트는 책에서만
+               봤던 피라미드와 스핑크스를 볼 수 있습니다.
+                저렴한 물가와 해양스포츠를 원한다면 다합이라는 
+               지역을 방문해보는 것도 추천합니다.</p>
+        </div>
+        <button type="button" onclick="location.href=''" class="button_style" id="restart_btn" ontouchstart="">다시하기</button>
+        <button type="button" onclick="location.href='../index.html'" class="button_style" id="go_to_main_btn" ontouchstart="">메인 페이지</button>
+        <h4 class="sub_title">차순위 추천 여행지</h4>
+        <div id="ranked_place">
+            <div id="second_place" class="place_change">
+                <div class="selected_place"></div>
+                <span>일본</span>
+                <img src="palce_svg/Japan.svg" alt="">
+            </div>
+            <div id="third_place" class="place_change">
+                <div class="selected_place"></div>
+                <span>네덜란드</span>
+                <img src="palce_svg/Netherlands.svg" alt="">
+            </div>
+        </div>
+        <span id="first_place"><div class="selected_place"></div>1순위 추천 여행지</span>
+        <h4 class="sub_title">테스트 공유하기</h4>
+        <div id="share_box"><div class="addthis_inline_share_toolbox"></div></div>
+        <footer>
+            <p><span id="add_message">직∙간접 광고가 포함된 서비스입니다</span><br>e-mail : dltldn333@naver.com<br>copyright ⓒ 2021 <b>Siwoo Lee</b> All Rights Reserved </p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60686694891926ce"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
