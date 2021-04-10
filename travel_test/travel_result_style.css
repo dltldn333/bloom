@@ -21,7 +21,7 @@
     outline: 0;
 }
 
-button, p, h3, h4, span{
+button, p, h1, h3, h4, span{ 
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -0.039%;
     font-weight: 400;
@@ -38,6 +38,26 @@ body, html{
 
 }
 
+/* 헤더설정 */
+header{
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+}
+
+header img{
+    width: 50px;
+}
+
+header h1{
+    font-size: 0.75rem;
+}
+
 /* 결과 설정 */
 
 .space{
@@ -50,7 +70,7 @@ body, html{
 
 .travel_result_section {
     position: relative;
-    margin-top: 5%;
+    margin-top: 10%;
     width: 90%;
     padding: 8% 13%;
     background-color: #F8F8FA;
